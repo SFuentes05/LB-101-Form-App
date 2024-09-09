@@ -1,23 +1,23 @@
-# Use an official Node.js runtime as a parent image
-FROM node:20
+# Use an official Node.js image as the base image
+FROM node:18
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files
+# Copy package.json and package-lock.json to the container
 COPY package*.json ./
 
-# Install the dependencies
+# Install dependencies
 RUN npm install
 
-# Copy the rest of your application files
+# Copy the rest of your application code to the container
 COPY . .
 
 # Build the TypeScript code
-CMD ["npm", "run", "build"]
+RUN npm run build
 
-# Expose the port your app runs on
-EXPOSE 5000
+# Expose the port the backend server will run on
+EXPOSE {$PORT}
 
-# Define the command to run your app
+# Start the backend server
 CMD ["npm", "start"]
