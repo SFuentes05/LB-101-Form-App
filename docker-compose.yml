@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    build: ./backend
+    image: sfuentes005/lb-101-form-app:backend
     container_name: LB-101-Form-Backend
     ports:
       - "5000:5000"
@@ -11,7 +11,7 @@ services:
       - MONGODB_URL=${MONGODB_URL}
 
   frontend:
-    build: ./frontend
+    image: sfuentes005/lb-101-form-app:frontend
     container_name: LB-101-Form-Frontend
     ports:
       - "5173:5173"
