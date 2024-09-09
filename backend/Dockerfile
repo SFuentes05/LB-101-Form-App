@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the TypeScript code
-RUN npm run build
+CMD ["npm", "run", "build"]
 
 # Expose the port your app runs on
 EXPOSE 5000

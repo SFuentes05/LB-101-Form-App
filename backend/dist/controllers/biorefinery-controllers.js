@@ -7,7 +7,6 @@ import DesiredProductHistory from "../models/DesiredProductHistory.js";
 import mongoose from "mongoose";
 import Form from "../models/Form.js";
 import FormHistory from "../models/FormHistory.js";
-import upload from "../multerConfig.js";
 const calculateProgress = (formData, totalFields, excludeFields = ['companyID', 'userID', 'dateCreated']) => {
     const relevantFields = Object.entries(formData).filter(([key, value]) => !excludeFields.includes(key));
     const filledFields = relevantFields.filter(([key, value]) => value !== null && value !== undefined && value !== '' && value !== 0).length;
@@ -56,13 +55,9 @@ export const createForm = async (req, res, next) => {
     }
 };
 export const editForm = [
-    upload.single('burnerPlate'),
     async (req, res, next) => {
         try {
             const { companyID, userID, dateCreated, biomass, annualProductionQuantity, energyGenerationType, thermalDemand, electricalDemand, annualOperatingHours, fuelType, fuelConsumption, fuelMarketPrice, boilerModel, energyCost, comments } = req.body;
-            if (req.file) {
-                req.body.burnerPlate = req.file.path;
-            }
             // Convert string IDs to ObjectId
             const companyObjectId = new mongoose.Types.ObjectId(companyID);
             const userObjectId = new mongoose.Types.ObjectId(userID);
