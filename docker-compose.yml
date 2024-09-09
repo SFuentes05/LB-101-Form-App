@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: LB-101-Form-Backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URL=${MONGODB_URL}
+
+  frontend:
+    build: ./frontend
+    container_name: LB-101-Form-Frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
