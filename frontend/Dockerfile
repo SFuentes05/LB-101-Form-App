@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the Vite app
-RUN npm run build
+CMD ["npm", "run", "build"]
 
 # Install serve to run the production build
 RUN npm install -g serve
