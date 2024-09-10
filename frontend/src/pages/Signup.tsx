@@ -13,9 +13,9 @@ import Input from '@mui/joy/Input';
 import Typography from '@mui/joy/Typography';
 import Stack from '@mui/joy/Stack';
 import toast, { Toaster } from 'react-hot-toast';
-import { useAuth } from "../context/AuthContext";
 import { useNavigate } from 'react-router-dom';
 import GoogleIcon from '../assets/GoogleIcon';
+import { useAuth } from '../context/useAuth';
 
 interface FormElements extends HTMLFormControlsCollection {
   firstName: HTMLInputElement;

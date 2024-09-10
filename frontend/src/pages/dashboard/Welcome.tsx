@@ -1,6 +1,6 @@
 import { Box, Typography, Stepper, Step, StepIndicator } from '@mui/joy';
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from "../../context/useAuth";
 import DashboardBox from '../../assets/DashboardBox';
 
 export default function Welcome() {

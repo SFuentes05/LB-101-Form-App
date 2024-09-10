@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, Button } from "@mui/joy";
 import { Link } from "react-router-dom";
 

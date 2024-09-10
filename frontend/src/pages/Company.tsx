@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { CssVarsProvider } from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
 import Box from '@mui/joy/Box';
@@ -8,7 +8,7 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import Button from '@mui/joy/Button';
 import toast from 'react-hot-toast';
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from '../context/useAuth';
 
 interface FormElements extends HTMLFormControlsCollection {
   name: HTMLInputElement;
@@ -112,7 +112,7 @@ const Company = () => {
                 <Breadcrumbs
                   size="sm"
                   aria-label="breadcrumbs"
-                  separator={<ChevronRightRoundedIcon fontSize='sm' />}
+                  separator={<ChevronRightRoundedIcon fontSize="small" />}
                   sx={{ pl: 0 }}
                 >
                   <Link

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
@@ -42,7 +41,7 @@ export default function Welcome() {
         <Button size="lg" variant="outlined" color="neutral" onClick={handleLeerMas}>
           Leer más
         </Button>
-        <Button size="lg" color="success" endDecorator={<ArrowForward fontSize="xl" />} onClick={handleEmpezar}>
+        <Button size="lg" color="success" endDecorator={<ArrowForward fontSize="medium" />} onClick={handleEmpezar}>
           Empezar
         </Button>
       </Box>
@@ -72,7 +71,7 @@ export default function Welcome() {
           <Typography
             fontSize="xl4"
             fontWeight="lg"
-            endDecorator={<Star fontSize="xl4" sx={{ color: 'warning.300' }} />}
+            endDecorator={<Star sx={{ fontSize: 'xl4', color: 'warning.300' }} />}
           >
             1er
           </Typography>

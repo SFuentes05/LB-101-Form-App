@@ -21,7 +21,7 @@ import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Button, CardActions, CardOverflow } from '@mui/joy';
 import toast from 'react-hot-toast';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/useAuth';
 import CountrySelector from '../assets/CountrySelector';
 
 interface FormElements extends HTMLFormControlsCollection {

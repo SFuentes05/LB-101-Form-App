@@ -7,7 +7,7 @@ import { Breadcrumbs, Card, Divider, FormControl, FormLabel, Stack, Typography, 
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import toast from 'react-hot-toast';
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../../context/useAuth';
 import QuestionTooltip from '../../components/Tooltip';
 
 interface FormElements extends HTMLFormControlsCollection {

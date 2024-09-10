@@ -22,7 +22,7 @@ import FactoryIcon from '@mui/icons-material/Factory';
 import SolarPowerIcon from '@mui/icons-material/SolarPower';
 
 import { closeSidebar } from '../utils';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/useAuth';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function Toggler({

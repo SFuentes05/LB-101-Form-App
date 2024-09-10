@@ -14,10 +14,13 @@ RUN npm install
 COPY . .
 
 # Build the Vite app
-CMD ["npm", "run", "dev"]
+RUN npm run build
+
+# Install serve to run the production build
+RUN npm install -g serve
 
 # Expose the port the frontend server will run on
-EXPOSE 3000
+EXPOSE 80
 
-# Start the frontend server
-CMD ["npm", "run", "dev"]
+# Start the frontend server using serve
+CMD ["serve", "-s", "dist", "-l", "80"]

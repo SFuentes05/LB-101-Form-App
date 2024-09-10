@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, useMediaQuery } from "@mui/material";
 import { CssVarsProvider, CssBaseline } from "@mui/joy";
-import { useAuth } from "../context/AuthContext";
 import ScheduleMeeting from './dashboard/ScheduleMeeting';
 import MyCompany from './dashboard/MyCompany';
 import Welcome from './dashboard/Welcome';
@@ -12,8 +11,6 @@ import PhotoBox from './dashboard/PhotoBox';
 
 const Home: React.FC = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1000px)");
-
-  const { user } = useAuth();
 
   const gridTemplateLargeScreens = `
     "i i e"

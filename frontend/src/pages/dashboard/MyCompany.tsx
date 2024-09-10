@@ -1,4 +1,3 @@
-import React from 'react';
 import DashboardBox from "../../assets/DashboardBox";
 import Button from '@mui/joy/Button';
 import Box from '@mui/joy/Box';
