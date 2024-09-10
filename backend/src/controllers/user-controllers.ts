@@ -198,7 +198,7 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
         // Set up cookie and token with companyID included
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "latambioenergy101form-g4hvexfcazhrasf9.eastus-01.azurewebsites.net",
+            domain: "latambioenergy101.com",
             signed: true,
             path: "/",
         });
@@ -237,7 +237,7 @@ export const userLogin = async (
 
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "latambioenergy101form-g4hvexfcazhrasf9.eastus-01.azurewebsites.net",
+            domain: "latambioenergy101.com",
             signed: true,
             path: "/",
         });
@@ -247,7 +247,7 @@ export const userLogin = async (
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-            domain: "latambioenergy101form-g4hvexfcazhrasf9.eastus-01.azurewebsites.net",
+            domain: "latambioenergy101.com",
             expires,
             httpOnly: true,
             signed: true,
@@ -306,7 +306,7 @@ export const userLogout = async (
 
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "latambioenergy101form-g4hvexfcazhrasf9.eastus-01.azurewebsites.net",
+            domain: "latambioenergy101.com",
             signed: true,
             path: "/",
         });
