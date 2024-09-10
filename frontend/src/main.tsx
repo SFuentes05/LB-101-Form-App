@@ -7,7 +7,7 @@ import { AuthProvider } from "./context/AuthContext.tsx";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://latambioenergy101.azurewebsites.net/api/v1";
+axios.defaults.baseURL = "https://latambioenergy101form-g4hvexfcazhrasf9.eastus-01.azurewebsites.net/api/v1";
 axios.defaults.withCredentials = true;
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

@@ -8,7 +8,7 @@ config();
 const app = express();
 
 //middlewares
-app.use(cors({ origin: "https://latambioenergy101.azurewebsites.net", credentials: true }));
+app.use(cors({ origin: "https://latambioenergy101form-g4hvexfcazhrasf9.eastus-01.azurewebsites.net", credentials: true }));
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(bodyParser.json({ limit: '20mb' }));
