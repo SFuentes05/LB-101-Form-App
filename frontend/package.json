@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "start": "serve -s build -l 80",
-    "azure-start": "npm install && npm run build && npm run start"
+    "start": "serve -s ../backend/dist/frontend -l 80",
+    "azure-start": "npm install && npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
