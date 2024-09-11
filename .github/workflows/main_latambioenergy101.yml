@@ -65,4 +65,3 @@ jobs:
           app-name: 'latambioenergy101'
           slot-name: 'Production'
           package: .
-          startup-command: 'npm start'
