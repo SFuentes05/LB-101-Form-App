@@ -1,9 +1,7 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { CssVarsProvider } from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
 import Box from '@mui/joy/Box';
-import { useState, useEffect } from 'react';
-import LoadingSpinner from './assets/LoadingSpinner';
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -20,32 +18,16 @@ import SelectProduct from "./pages/SelectProduct";
 import Infrastructure from "./pages/101/Infrastructure";
 import SolarPanels from "./pages/101/SolarPanel";
 import Welcome from "./pages/Welcome";
-import Form from "./pages/101/Form";
 
 function App() {
   const auth = useAuth();
-  const [isLoading, setIsLoading] = useState(true);
-  const location = useLocation();
-
-  useEffect(() => {
-    // Simulate loading
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
-
-  if (isLoading) {
-    return <LoadingSpinner />;
-  }
-
-  const isNotFoundPage = location.pathname === '*';
 
   return (
     <CssVarsProvider disableTransitionOnChange>
       <CssBaseline />
       <Box sx={{ display: 'flex', height: '100%', width: '100%'}}>
         {auth?.isLoggedIn && <Header />}
-        {auth?.isLoggedIn && !isNotFoundPage && <Sidebar />}
+        {auth?.isLoggedIn && <Sidebar />}
         {auth?.isLoggedIn ? (
           <Box
             component="main"
@@ -69,7 +51,6 @@ function App() {
           >
             <Routes>
               <Route path="/home" element={<Home />} />
-              <Route path="/101-form/Form" element={<Form />} />
               <Route path="/101-form/BRinfrastructure" element={<Infrastructure />} />
               <Route path="/101-form/SolarPanels" element={<SolarPanels />} />
               <Route path="/calendar" element={<Calendar />} />
