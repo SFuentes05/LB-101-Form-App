@@ -20,12 +20,16 @@ app.use(bodyParser.urlencoded({ limit: '20mb', extended: true }));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// API routes
+app.use("/api/v1", appRouter);
+
+// Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
 });
-
-app.use("/api/v1", appRouter);
 
 export default app;
