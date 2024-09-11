@@ -11,7 +11,7 @@ config();
 const app = express();
 
 //middlewares
-app.use(cors({ origin: "https://latambioenergy101.com", credentials: true }));
+app.use(cors({ origin: process.env.API_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(bodyParser.json({ limit: '20mb' }));
