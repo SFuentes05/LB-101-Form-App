@@ -1,8 +1,6 @@
-import * as React from 'react';
 import { CssVarsProvider } from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
 import Box from '@mui/joy/Box';
-import MyTeam from '../../components/MyTeam';
 
 export default function Team() {
   return (
@@ -24,7 +22,6 @@ export default function Team() {
             overflow: 'auto',
           }}
         >
-          <MyTeam />
         </Box>
       </Box>
     </CssVarsProvider>

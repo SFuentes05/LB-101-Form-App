@@ -3,11 +3,11 @@ import { CssVarsProvider } from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
 import Box from '@mui/joy/Box';
 import Header from '../../components/Header';
-import { Breadcrumbs, Card, Divider, FormControl, FormLabel, Stack, Typography, Button, Input, CardOverflow, CardActions, Textarea, Link, Radio, RadioGroup, Slider } from '@mui/joy';
+import { Breadcrumbs, Card, Divider, FormControl, FormLabel, Stack, Typography, Button, CardOverflow, CardActions, Textarea, Link, Radio, RadioGroup, Slider } from '@mui/joy';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import toast from 'react-hot-toast';
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../../context/useAuth';
 
 interface FormElements extends HTMLFormControlsCollection {
   availableSpace: HTMLInputElement;

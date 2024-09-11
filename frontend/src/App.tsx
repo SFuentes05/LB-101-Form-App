@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
-import { useAuth } from "./context/AuthContext";
+import { useAuth } from "./context/useAuth";
 import UserProfile from "./pages/user/UserProfile";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -18,8 +18,6 @@ import UploadFiles from "./pages/UploadFiles";
 import Company from "./pages/Company";
 import SelectProduct from "./pages/SelectProduct";
 import Infrastructure from "./pages/101/Infrastructure";
-import IndustrialProcess from "./pages/101/IndustrialProcess";
-import DesiredProduct from "./pages/101/DesiredProduct";
 import SolarPanels from "./pages/101/SolarPanel";
 import Welcome from "./pages/Welcome";
 import Form from "./pages/101/Form";
@@ -73,8 +71,6 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/101-form/Form" element={<Form />} />
               <Route path="/101-form/BRinfrastructure" element={<Infrastructure />} />
-              <Route path="/101-form/BRindustrial-process" element={<IndustrialProcess />} />
-              <Route path="/101-form/BRdesired-product" element={<DesiredProduct />} />
               <Route path="/101-form/SolarPanels" element={<SolarPanels />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/uploadfile" element={<UploadFiles />} />

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Autocomplete from '@mui/joy/Autocomplete';
 import AutocompleteOption from '@mui/joy/AutocompleteOption';
 import AspectRatio from '@mui/joy/AspectRatio';
@@ -23,7 +22,7 @@ export default function CountrySelector(props: FormControlProps) {
         defaultValue={{ code: 'DR', label: 'Dominican Republic', phone: '1-809' }}
         options={countries}
         getOptionLabel={(option) => option.label} // Returns the label as a string
-        onChange={(event, newValue) => {
+        onChange={(_, newValue) => {
           if (newValue) {
             // Access the selected country data
             console.log(`Selected country: ${newValue.label} (${newValue.code})`);

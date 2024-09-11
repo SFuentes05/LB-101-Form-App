@@ -1,9 +1,8 @@
-import React from 'react';
-import DashboardBox from "../../assets/DashboardBox";
 import Button from '@mui/joy/Button';
 import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import DashboardBox from '../../assets/DashboardBox';
 
 const ScheduleMeeting = () => {
   const navigate = useNavigate(); // Create an instance of useNavigate

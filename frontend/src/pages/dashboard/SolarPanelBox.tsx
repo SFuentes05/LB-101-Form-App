@@ -16,7 +16,7 @@ import Input from '@mui/joy/Input';
 import Stack from '@mui/joy/Stack';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/useAuth";
 
 const SolarPanelBox = () => {
     const auth = useAuth();
