@@ -32,3 +32,8 @@ build
 **.env
 **package-lock.json
 **dist
+
+**/node_modules
+**/dist
+**/build
+**/.cache
