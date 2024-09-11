@@ -23,15 +23,14 @@ dist-ssr
 *.sln
 *.sw?
 
-node_modules
-.env
-dist
-build
-
 **node_modules
 **.env
 **package-lock.json
 **dist
+
+# Root level ignores
+/node_modules
+/.env
 
 **/node_modules
 **/dist
