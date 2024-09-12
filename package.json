@@ -12,7 +12,7 @@
     "build": "npm run build-frontend && npm run build-backend",
     "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\""
   },
-  "devDependencies": {
-    "concurrently": "^6.2.0"
+  "dependencies": {
+    "concurrently": "^9.0.1"
   }
 }
