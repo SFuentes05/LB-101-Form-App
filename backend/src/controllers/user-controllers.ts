@@ -27,6 +27,9 @@ export const getAllUsers = async (
     }
 };
 
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3001';
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:5000';
+
 export const userSignup = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const verificationToken = randomBytes(32).toString("hex");
@@ -198,7 +201,7 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
         // Set up cookie and token with companyID included
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             signed: true,
             path: "/",
         });
@@ -208,6 +211,7 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
+            domain: new URL(BACKEND_URL).hostname,
             expires,
             httpOnly: true,
             signed: true
@@ -237,7 +241,7 @@ export const userLogin = async (
 
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             signed: true,
             path: "/",
         });
@@ -247,7 +251,7 @@ export const userLogin = async (
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             expires,
             httpOnly: true,
             signed: true,
@@ -306,7 +310,7 @@ export const userLogout = async (
 
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             signed: true,
             path: "/",
         });

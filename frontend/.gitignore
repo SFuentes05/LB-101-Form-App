@@ -27,3 +27,7 @@ dist-ssr
 **.env
 **package-lock.json
 **dist
+
+node_modules
+.dockerignore
+.env

@@ -20,6 +20,8 @@ export const getAllUsers = async (req, res, next) => {
         return res.status(500).json({ message: "Error listing users: ", cause: error.message });
     }
 };
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3001';
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:5000';
 export const userSignup = async (req, res, next) => {
     try {
         const verificationToken = randomBytes(32).toString("hex");
@@ -180,7 +182,7 @@ export const userSignup = async (req, res, next) => {
         // Set up cookie and token with companyID included
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             signed: true,
             path: "/",
         });
@@ -189,6 +191,7 @@ export const userSignup = async (req, res, next) => {
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
+            domain: new URL(BACKEND_URL).hostname,
             expires,
             httpOnly: true,
             signed: true
@@ -213,7 +216,7 @@ export const userLogin = async (req, res, next) => {
         }
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             signed: true,
             path: "/",
         });
@@ -222,7 +225,7 @@ export const userLogin = async (req, res, next) => {
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             expires,
             httpOnly: true,
             signed: true,
@@ -272,7 +275,7 @@ export const userLogout = async (req, res, next) => {
         }
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: "localhost",
+            domain: new URL(BACKEND_URL).hostname,
             signed: true,
             path: "/",
         });

@@ -1,8 +1,18 @@
 {
-  "dependencies": {
-    "multer": "^1.4.5-lts.1"
+  "name": "lb-101-form-app",
+  "version": "1.0.0",
+  "scripts": {
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "build-backend": "cd backend && npm run build",
+    "start-frontend": "cd frontend && npm start",
+    "start-backend": "cd backend && npm start",
+    "install": "npm run install-frontend && npm run install-backend",
+    "build": "npm run build-frontend && npm run build-backend",
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\""
   },
   "devDependencies": {
-    "@types/multer": "^1.4.12"
+    "concurrently": "^6.2.0"
   }
 }
