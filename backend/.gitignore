@@ -1,3 +1,14 @@
-node_modules
-.dockerignore
-.env
+**node_modules
+**.env
+**package-lock.json
+**dist
+
+# Root level ignores
+/node_modules
+/.env
+
+**/node_modules
+**/dist
+**/build
+**/.cache
+**/.env

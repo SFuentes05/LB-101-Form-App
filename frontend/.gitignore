@@ -28,6 +28,17 @@ dist-ssr
 **package-lock.json
 **dist
 
-node_modules
-.dockerignore
-.env
+# Root level ignores
+/node_modules
+/.env
+
+**/node_modules
+**/dist
+**/build
+**/.cache
+
+build
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
