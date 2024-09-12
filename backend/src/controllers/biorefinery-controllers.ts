@@ -16,7 +16,7 @@ const calculateProgress = (formData, totalFields, excludeFields = ['companyID', 
   return { progress: parseFloat(progress), filledFields, totalFields };
 };
 
-// Get all forms
+// Get all forms - 101
 export const getAllForms = async (
   req: Request,
   res: Response,
