@@ -240,6 +240,8 @@ export const userLogin = async (
             httpOnly: true,
             signed: true,
             path: "/",
+            sameSite: 'none',
+            secure: true
         });
 
         const token = createToken(user._id.toString(), user.email, user.companyID.toString(), "7d");
@@ -250,6 +252,8 @@ export const userLogin = async (
             expires,
             httpOnly: true,
             signed: true,
+            sameSite: 'none',
+            secure: true
         });
         return res.status(200).json({ message: "OK", name: user.firstName, email: user.email });
     } catch (error) {
@@ -307,6 +311,8 @@ export const userLogout = async (
             httpOnly: true,
             signed: true,
             path: "/",
+            sameSite: 'none',
+            secure: true
         });
 
         return res.status(200).json({ message: "OK", firstName: user.firstName, email: user.email });
