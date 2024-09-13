@@ -27,8 +27,7 @@ export const getAllUsers = async (
     }
 };
 
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3001';
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:5000';
+const BACKEND_URL = 'https://lb-101-form-app-hzq370391-solidaritytech.vercel.app';
 
 export const userSignup = async (req: Request, res: Response, next: NextFunction) => {
     try {

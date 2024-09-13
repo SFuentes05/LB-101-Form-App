@@ -8,7 +8,7 @@ const app = express();
 
 //middlewares
 app.use(cors({ 
-  origin: process.env.FRONTEND_URL || "http://localhost:5173", 
+  origin: "https://lb-101-form-app-frontend.vercel.app", 
   credentials: true 
 }));
 app.use(express.json());
