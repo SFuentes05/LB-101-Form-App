@@ -211,7 +211,9 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
             path: "/",
             expires,
             httpOnly: true,
-            signed: true
+            signed: true,
+            sameSite: 'none',
+            secure: true
         });
         return res.status(201).json({ message: "User, company, and forms created successfully", name: user.firstName, email: user.email });
     } catch (error) {
