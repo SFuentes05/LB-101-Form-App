@@ -9,6 +9,7 @@ services:
     environment:
       - NODE_ENV=production
       - MONGODB_URL=${MONGODB_URL}
+      - PORT=8080
 
   frontend:
     image: sfuentes005/lb-101-form-app:frontend
