@@ -202,6 +202,8 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
             httpOnly: true,
             signed: true,
             path: "/",
+            sameSite: 'none',
+            secure: true
         });
 
         const token = createToken(user._id.toString(), user.email, user.companyID.toString(), "7d");
