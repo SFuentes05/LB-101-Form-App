@@ -200,7 +200,7 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
         // Set up cookie and token with companyID included
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: new URL(BACKEND_URL).hostname,
+            domain: '.vercel.app',
             signed: true,
             path: "/",
         });
@@ -210,7 +210,7 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-            domain: new URL(BACKEND_URL).hostname,
+            domain: '.vercel.app',
             expires,
             httpOnly: true,
             signed: true
@@ -240,7 +240,7 @@ export const userLogin = async (
 
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: new URL(BACKEND_URL).hostname,
+            domain: '.vercel.app',
             signed: true,
             path: "/",
         });
@@ -250,7 +250,7 @@ export const userLogin = async (
         expires.setDate(expires.getDate() + 7);
         res.cookie(COOKIE_NAME, token, {
             path: "/",
-            domain: new URL(BACKEND_URL).hostname,
+            domain: '.vercel.app',
             expires,
             httpOnly: true,
             signed: true,
@@ -309,7 +309,7 @@ export const userLogout = async (
 
         res.clearCookie(COOKIE_NAME, {
             httpOnly: true,
-            domain: new URL(BACKEND_URL).hostname,
+            domain: '.vercel.app',
             signed: true,
             path: "/",
         });
