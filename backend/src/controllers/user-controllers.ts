@@ -27,7 +27,7 @@ export const getAllUsers = async (
     }
 };
 
-const BACKEND_URL = 'https://lb-101-form-app-hzq370391-solidaritytech.vercel.app';
+const BACKEND_URL = 'https://lb-101-form-app-api.vercel.app';
 
 export const userSignup = async (req: Request, res: Response, next: NextFunction) => {
     try {
