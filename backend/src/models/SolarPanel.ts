@@ -82,4 +82,7 @@ const solarPanelSchema = new mongoose.Schema({
     },
 })
 
+solarPanelSchema.index({ companyID: 1 });
+solarPanelSchema.index({ userID: 1 });
+
 export default mongoose.model("SolarPanel", solarPanelSchema);

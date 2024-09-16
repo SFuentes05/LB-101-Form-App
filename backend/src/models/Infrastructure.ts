@@ -49,4 +49,7 @@ const infrastructureSchema = new mongoose.Schema({
     }
 })
 
+infrastructureSchema.index({ companyID: 1 });
+infrastructureSchema.index({ userID: 1 });
+
 export default mongoose.model("Infrastructure", infrastructureSchema);

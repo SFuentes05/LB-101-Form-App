@@ -67,4 +67,6 @@ const formSchema = new mongoose.Schema({
         default: 0
     }
 });
+formSchema.index({ companyID: 1 });
+formSchema.index({ userID: 1 });
 export default mongoose.model("Form", formSchema);

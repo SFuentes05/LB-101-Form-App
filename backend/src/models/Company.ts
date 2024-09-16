@@ -44,4 +44,6 @@ const companySchema = new mongoose.Schema({
     },
 })
 
+companySchema.index({ userID: 1 });
+
 export default mongoose.model("Company", companySchema);
