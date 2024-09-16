@@ -257,7 +257,8 @@ export const userLogin = async (
             httpOnly: true,
             signed: true,
             sameSite: 'none',
-            secure: true
+            secure: true,
+            domain: 'lb-101-form-app-frontend.vercel.app'
         });
         return res.status(200).json({ message: "OK", name: user.firstName, email: user.email });
     } catch (error) {
