@@ -16,7 +16,7 @@ const NotFound = () => {
     >
       <Box
         component="img"
-        src="/placeholder-404.png"
+        src="/ruby-error-sign.png"
         alt="404 No Encontrado"
         sx={{
           width: '100%',
@@ -30,7 +30,7 @@ const NotFound = () => {
       <Typography level="body-lg" sx={{ marginBottom: '2rem' }}>
         La página que estás buscando no existe o ha sido movida.
       </Typography>
-      <Button component={Link} to="/home" variant="solid" color="primary">
+      <Button component={Link} to="/" variant="solid" color="success">
         Ir al Inicio
       </Button>
     </Box>

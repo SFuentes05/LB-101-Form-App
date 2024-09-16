@@ -7,7 +7,7 @@ import { AuthProvider } from "./context/AuthContext.tsx";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://lb-101-form-app-api.vercel.app/api/v1";
+axios.defaults.baseURL = import.meta.env.API_BASE_URL || "https://lb-101-form-app-frontend.vercel.app/api/v1";
 axios.defaults.withCredentials = true;
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
